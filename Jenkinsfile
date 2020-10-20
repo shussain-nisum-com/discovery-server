@@ -12,10 +12,10 @@ pipeline{
 	      sh 'mvn install -DskipTests'
 	    }
 	   }
-	   stage('Package'){
-      	steps{
-      	      sh 'mvn package'
-      	    }
-      	}
+	  // stage('Package'){
+      	//steps{
+      	 //     sh 'mvn package'
+      	 //   }
+      //	}
 	}
 }
