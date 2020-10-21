@@ -1,21 +1,3 @@
-pipeline{
-  agent any
-	stages {
-	    stage('Clean') {
-	      steps{
-	         sh 'mvn clean'
-      	     }
- 	    }
-	    stage('Install'){
-	      steps{
+@Library('mpl') _
 
-	      sh 'mvn install -DskipTests'
-	    }
-	   }
-	  // stage('Package'){
-      	//steps{
-      	 //     sh 'mvn package'
-      	 //   }
-      //	}
-	}
-}
+MPLPipeline {}
