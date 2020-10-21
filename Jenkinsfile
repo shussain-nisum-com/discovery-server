@@ -1,4 +1,21 @@
-@Library('mpl') _
+pipeline{
+  agent any
+	stages {
+	    stage('Clean') {
+	      steps{
+	         sh 'mvn clean'
+      	     }
+ 	    }
+	    stage('Install'){
+	      steps{
 
-MPLPipeline {}
-
+	      sh 'mvn install -DskipTests'
+	    }
+	   }
+	  // stage('Package'){
+      	//steps{
+      	 //     sh 'mvn package'
+      	 //   }
+      //	}
+	}
+}
